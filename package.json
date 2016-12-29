@@ -1,0 +1,82 @@
+{
+  "name": "react-native-sensors",
+  "version": "0.1.0",
+  "description": "A developer friendly approach for sensors in react-native",
+  "scripts": {
+    "contributor:add": "all-contributors add",
+    "postcontributor:add": "npm run contributor:generate",
+    "contributor:generate": "all-contributors generate",
+    "postcontributor:generate": "npm run format",
+    "format": "prettier --write ./src/*",
+    "test": "prettier --check ./src/*",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "react-native"
+  ],
+  "author": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "timers": "fake",
+    "projects": [
+      {
+        "displayName": "Unit",
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+          "tests/*"
+        ],
+        "timers": "fake"
+      }
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react-native": ">=0.39.0",
+    "react-native-windows": "^0.68.15"
+  },
+  "dependencies": {
+    "rxjs": ">= 6"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "6.1.2",
+    "babel-core": "6.26.3",
+    "babel-jest": "24.1.0",
+    "babel-preset-react-native": "4.0.0",
+    "husky": "4.2.3",
+    "jest": "24.1.0",
+    "metro-config": "^0.67.0",
+    "prettier": "2.2.1",
+    "pretty-quick": "3.1.0",
+    "react": "^17.0.2",
+    "react-native": "^0.68.0",
+    "regenerator-runtime": "0.13.1",
+    "rxjs-marbles": "5.0.0",
+    "semantic-release": "17.3.9",
+    "travis-deploy-once": "5.0.11"
+  },
+  "files": [
+    "/RNSensors.podspec",
+    "/src/*.js",
+    "/index.*",
+    "/android/",
+    "/ios/",
+    "/windows/",
+    "/LICENSE",
+    "/README.md",
+    "/scripts/",
+    "/website/"
+  ]
+}
