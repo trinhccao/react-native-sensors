@@ -17,6 +17,7 @@
   "keywords": [
     "react-native"
   ],
+  "homepage": "https://github.com/trinhccao/react-native-sensors",
   "author": "",
   "husky": {
     "hooks": {
